@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Blog App</title>
+</head>
+<body>
+    <h1>List of blogs</h1>
+
+    <a href="/blogs/new" class="button">Create New Blog</a>
+
+    <% listOfArticles.forEach((article, index) => { %>
+        <h4> <%= article.title %> </h4> 
+        <a href="/blogs/<%= index %>/view">View</a>
+        <a href="/blogs/<%= index %>/edit">Edit</a>
+        <a href="/blogs/<%= index %>/delete">Delete</a>
+    <% }) %>
+    
+</body>
+</html>
